@@ -27,6 +27,13 @@ namespace LeapTesterTDD
             Assert.AreEqual(true, result);
         }
 
+        [Test]
+        public void SixteenIsDivisibleByFour()
+        {
+            bool result = LeapYearIdentifier.CheckIfDivisibleByFour(16);
+            Assert.AreEqual(true, result);
+        }
+
     }
 
     public static class LeapYearIdentifier
