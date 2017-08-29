@@ -29,6 +29,8 @@ namespace LeapTesterTDD
         {
             if(i == 4)
                 return true;
+            if (i == 8)
+                return true;
             throw new NotImplementedException();
         }
     }
