@@ -40,11 +40,7 @@ namespace LeapTesterTDD
     {
         public static bool CheckIfDivisibleByFour(int i)
         {
-            if(i == 4)
-                return true;
-            if (i == 8)
-                return true;
-            if (i == 12)
+            if(i % 4 == 0)
                 return true;
             throw new NotImplementedException();
         }
