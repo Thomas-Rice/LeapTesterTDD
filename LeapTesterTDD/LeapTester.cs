@@ -13,6 +13,14 @@ namespace LeapTesterTDD
             Assert.AreEqual(true, result);
         }
 
+        [Test]
+        public void EightIsDivisibleByFour()
+        {
+            bool result = LeapYearIdentifier.CheckIfDivisibleByFour(8);
+            Assert.AreEqual(true, result);
+        }
+
+
     }
 
     public static class LeapYearIdentifier
