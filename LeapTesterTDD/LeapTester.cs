@@ -17,7 +17,7 @@ namespace LeapTesterTDD
     {
         public static bool CheckIfDivisibleByFour(int i)
         {
-            throw new System.NotImplementedException();
+            return true;
         }
     }
 }
