@@ -12,4 +12,12 @@ namespace LeapTesterTDD
             Assert.AreEqual(true, result);
         }
     }
+
+    public static class LeapYearIdentifier
+    {
+        public static bool CheckIfDivisibleByFour(int i)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 }
