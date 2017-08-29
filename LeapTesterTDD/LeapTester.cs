@@ -34,6 +34,13 @@ namespace LeapTesterTDD
             Assert.AreEqual(true, result);
         }
 
+        [Test]
+        public void ThreeIsDivisibleByFour()
+        {
+            bool result = LeapYearIdentifier.CheckIfDivisibleByFour(3);
+            Assert.AreEqual(false, result);
+        }
+
     }
 
     public static class LeapYearIdentifier
