@@ -48,6 +48,13 @@ namespace LeapTesterTDD
             Assert.AreEqual(false, result);
         }
 
+        [Test]
+        public void NineIsDivisibleByFour()
+        {
+            bool result = LeapYearIdentifier.CheckIfDivisibleByFour(9);
+            Assert.AreEqual(false, result);
+        }
+
     }
 
     public static class LeapYearIdentifier
