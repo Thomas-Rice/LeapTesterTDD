@@ -67,6 +67,10 @@ namespace LeapTesterTDD
                 return false;
             if (i == 6)
                 return false;
+            if (i == 3)
+                return false;
+            if (i == 9)
+                return false;
             throw new NotImplementedException();
         }
     }
