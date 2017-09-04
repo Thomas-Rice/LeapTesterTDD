@@ -6,55 +6,20 @@ namespace LeapTesterTDD
     [TestFixture]
     public class LeapTesterShould
     {
-        [Test]
-        public void FourIsDivisibleByFour()
-        {
-            bool result = LeapYearIdentifier.CheckIfDivisibleByFour(4);
-            Assert.AreEqual(true, result);
-        }
 
-        [Test]
-        public void EightIsDivisibleByFour()
-        {
-            bool result = LeapYearIdentifier.CheckIfDivisibleByFour(8);
-            Assert.AreEqual(true, result);
-        }
+        [TestCase(4, ExpectedResult = true)]
+        [TestCase(8, ExpectedResult = true)]
+        [TestCase(12, ExpectedResult = true)]
+        [TestCase(16, ExpectedResult = true)]
 
-        [Test]
-        public void TwelveIsDivisibleByFour()
-        {
-            bool result = LeapYearIdentifier.CheckIfDivisibleByFour(12);
-            Assert.AreEqual(true, result);
-        }
+        [TestCase(3, ExpectedResult = false)]
+        [TestCase(6, ExpectedResult = false)]
+        [TestCase(9, ExpectedResult = false)]
 
-        [Test]
-        public void SixteenIsDivisibleByFour()
+        public bool IsDivisibleByFour(int value)
         {
-            bool result = LeapYearIdentifier.CheckIfDivisibleByFour(16);
-            Assert.AreEqual(true, result);
+            return LeapYearIdentifier.CheckIfDivisibleByFour(value);
         }
-
-        [Test]
-        public void ThreeIsDivisibleByFour()
-        {
-            bool result = LeapYearIdentifier.CheckIfDivisibleByFour(3);
-            Assert.AreEqual(false, result);
-        }
-
-        [Test]
-        public void SixIsDivisibleByFour()
-        {
-            bool result = LeapYearIdentifier.CheckIfDivisibleByFour(6);
-            Assert.AreEqual(false, result);
-        }
-
-        [Test]
-        public void NineIsDivisibleByFour()
-        {
-            bool result = LeapYearIdentifier.CheckIfDivisibleByFour(9);
-            Assert.AreEqual(false, result);
-        }
-
 
     }
 
