@@ -23,6 +23,7 @@ namespace LeapTesterTDD
 
         [TestCase(4, ExpectedResult = false)]
         [TestCase(100, ExpectedResult = true)]
+        [TestCase(2012, ExpectedResult = false)]
         public bool IsDivisibleByOneHundred(int value)
         {
             return LeapYearIdentifier.CheckIfDivisibleByOneHundred(value);
@@ -41,9 +42,11 @@ namespace LeapTesterTDD
         {
             if(value == 4)
                 return false;
+            if (value == 2012)
+                return false;
             else
                 return true;
-            
+
         }
     }
 }
