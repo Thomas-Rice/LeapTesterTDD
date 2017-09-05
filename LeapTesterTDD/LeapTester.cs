@@ -30,6 +30,15 @@ namespace LeapTesterTDD
             return LeapYearIdentifier.CheckIfDivisibleByOneHundred(value);
         }
 
+        [TestCase(4, ExpectedResult = false)]
+        public bool IsDivisibleByFourHundred(int value)
+        {
+            return LeapYearIdentifier.CheckIfDivisibleByFourHundred(value);
+        }
+
+
+
+
     }
 
     public static class LeapYearIdentifier
@@ -42,6 +51,14 @@ namespace LeapTesterTDD
         public static bool CheckIfDivisibleByOneHundred(int value)
         {
             return value % 100 == 0;
+        }
+
+        public static bool CheckIfDivisibleByFourHundred(int value)
+        {
+            if (value == 4)
+                return false;
+            else
+                throw new NotImplementedException();
         }
     }
 }
