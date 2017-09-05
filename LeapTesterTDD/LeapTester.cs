@@ -41,15 +41,7 @@ namespace LeapTesterTDD
 
         public static bool CheckIfDivisibleByOneHundred(int value)
         {
-            if(value == 4)
-                return false;
-            if (value == 2012)
-                return false;
-            if (value == 2016)
-                return false;
-            else
-                return true;
-
+            return value % 100 == 0;
         }
     }
 }
