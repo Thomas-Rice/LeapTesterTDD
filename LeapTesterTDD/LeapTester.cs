@@ -33,13 +33,17 @@ namespace LeapTesterTDD
         [TestCase(4, ExpectedResult = false)]
         [TestCase(100, ExpectedResult = false)]
         [TestCase(400, ExpectedResult = true)]
+        [TestCase(2012, ExpectedResult = false)]
         public bool IsDivisibleByFourHundred(int value)
         {
             return LeapYearIdentifier.CheckIfDivisibleByFourHundred(value);
         }
 
-
-
+        [TestCase(4, ExpectedResult = true)]
+        public bool IsYearALeapYear(int year)
+        {
+            return LeapYearIdentifier.CheckIfYearIsALeapYear(year);
+        }
 
     }
 
@@ -58,6 +62,15 @@ namespace LeapTesterTDD
         public static bool CheckIfDivisibleByFourHundred(int value)
         {
             return value % 400 == 0;
+        }
+
+
+        public static bool CheckIfYearIsALeapYear(int year)
+        {
+            if (year == 4)
+                return true;
+            else
+                throw new NotImplementedException();
         }
     }
 }
