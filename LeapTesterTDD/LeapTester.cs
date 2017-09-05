@@ -57,14 +57,7 @@ namespace LeapTesterTDD
 
         public static bool CheckIfDivisibleByFourHundred(int value)
         {
-            if (value == 4)
-                return false;
-            if (value == 100)
-                return false;
-            if (value == 400)
-                return true;
-            else
-                throw new NotImplementedException();
+            return value % 400 == 0;
         }
     }
 }
